@@ -1,12 +1,12 @@
 #!/bin/bash
-docker ps -a | grep web
+docker ps -a | grep NGX
 if [ "$?" -eq 0 ]
 then
-docker stop web
-docker rm web
-docker build -t img2 .
-docker run -dit -p 8081:80 --name web img2
+docker stop NGX
+docker rm NGX
+docker build -t img3 .
+docker run -dit -p 8081:80 --name NGX img3
 else 
-docker build -t img2 .
-docker run -dit -p 8081:80 --name web img2
+docker build -t imG3 .
+docker run -dit -p 8081:80 --name NGX img3
 fi

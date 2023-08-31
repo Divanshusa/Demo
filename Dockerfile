@@ -1,5 +1,3 @@
-FROM img1
-RUN yum install httpd -y
-COPY ./index.html /var/www/html/
+FROM nginx
+COPY ./index.html /usr/share/nginx/html/
 EXPOSE 80
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
